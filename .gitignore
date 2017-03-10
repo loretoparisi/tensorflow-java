@@ -1,3 +1,18 @@
+<<<<<<< HEAD
 .DS_Store
 LabelImage$GraphBuilder.class LabelImage.class TensorFlowExample.class
 jni/LICENSE jni/libtensorflow_jni.dylib
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> ae7fd4603e8557d5d53f81c40b8e51a0ad8f06da
