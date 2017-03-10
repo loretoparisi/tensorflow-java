@@ -8,7 +8,6 @@ You need to run the `download.sh` script that will grap the right native library
 git clone https://github.com/loretoparisi/tensorflow-java.git \
 cd tensorflow-java \
 sh download.sh \
-javac -cp lib/libtensorflow-1.0.0-PREVIEW1.jar LabelImage.java
 ```
 
 ## How to Run the Inception example
