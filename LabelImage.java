@@ -62,10 +62,13 @@ public class LabelImage {
     try (Tensor image = constructAndExecuteGraphToNormalizeImage(imageBytes)) {
       float[] labelProbabilities = executeInceptionGraph(graphDef, image);
       int bestLabelIdx = maxIndex(labelProbabilities);
+      String bestLabelNormalized=labels.get(bestLabelIdx).replaceAll(" ", "_").toLowerCase();
       System.out.println(
           String.format(
-              "BEST MATCH: %s (%.2f%% likely)",
-              labels.get(bestLabelIdx), labelProbabilities[bestLabelIdx] * 100f));
+              "%s",
+              bestLabelNormalized));
+              //"BEST MATCH: %s (%.2f%% likely)",
+              //bestLabelNormalized, labelProbabilities[bestLabelIdx] * 100f));
     }
   }
 
