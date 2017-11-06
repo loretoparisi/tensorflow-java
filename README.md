@@ -2,19 +2,20 @@
 Tensorflow Java examples
 
 ## How To Install
-You need to run the `download.sh` script that will grap the right native library for your platform and put it to `jni/` folder and will download the `inception5` model in order to be ready to run simple examples:
+You need to run the `jni.sh` to install the right Java bindings for your platform and the `download.sh` script that will download the `inception5` model in order to be ready to run a simple examples:
 
 ```bash
 git clone https://github.com/loretoparisi/tensorflow-java.git \
 cd tensorflow-java \
+sh jni.sh \
 sh download.sh \
 ```
 
 ## How to Run the Inception example
 ```bash
 cd tensorflow-java
-javac -cp lib/libtensorflow-1.0.0-PREVIEW1.jar LabelImage.java
-java -cp lib/libtensorflow-1.0.0-PREVIEW1.jar:. -Djava.library.path=./jni LabelImage models/ images/example-400x288.jpg
+javac -cp lib/libtensorflow-1.4.0.jar LabelImage.java
+java -cp lib/libtensorflow-1.4.0.jar:. -Djava.library.path=./jni LabelImage models/ images/example-400x288.jpg
 ```
 
 ## A simple Hello World example
@@ -34,8 +35,8 @@ Save it and then from command line compile and run
 
 ```bash
 cd tensorflow-java
-javac -cp lib/libtensorflow-1.0.0-PREVIEW1.jar TensorFlowExample.java
-java -cp lib/libtensorflow-1.0.0-PREVIEW1.jar:. -Djava.library.path=./jni TensorFlowExample
+javac -cp lib/libtensorflow-1.4.0.jar TensorFlowExample.java
+java -cp lib/libtensorflow-1.4.0.jar:. -Djava.library.path=./jni TensorFlowExample
 ```
 
 If you get the TensorFlow version as output it worked!
