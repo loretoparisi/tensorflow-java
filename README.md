@@ -11,13 +11,6 @@ sh jni.sh \
 sh download.sh \
 ```
 
-## How to Run the Inception example
-```bash
-cd tensorflow-java
-javac -cp lib/libtensorflow-1.4.0.jar LabelImage.java
-java -cp lib/libtensorflow-1.4.0.jar:. -Djava.library.path=./jni LabelImage models/ images/example-400x288.jpg
-```
-
 ## A simple Hello World example
 Create a simple Java class with a main to be executable and import `org.tensorflow.TensorFlow`
 
@@ -43,6 +36,15 @@ If you get the TensorFlow version as output it worked!
 
 ```bash
 TensorFlowExample using TensorFlow version: 1.0.0-rc2
+```
+
+## Real world (Inception) example
+We use the `LabelImage` official Tensorflow example to label an example image with the inception graph model.
+
+```
+$ javac -cp lib/libtensorflow-1.4.0.jar LabelImage.java 
+$ java -cp lib/libtensorflow-1.4.0.jar:. -Djava.library.path=./jni LabelImage models/ images/example-400x288.jpg 
+BEST MATCH: lakeside (19,00% likely)
 ```
 
 ## Disclaimer
