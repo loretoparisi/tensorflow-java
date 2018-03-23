@@ -1,5 +1,5 @@
 # tensorflow-java
-Tensorflow Java examples
+Tensorflow Java pipeline and examples. This simple Java pipeline for TensorFlow Java API supports *Tensorflow >= 1.4* and it has been tested with *TF 1.4.0* and *TF 1.6.0*.
 
 ## How To Install
 You need to run the `jni.sh` to install the right Java bindings for your platform and the `download.sh` script that will download the `inception5` model in order to be ready to run a simple examples:
@@ -28,8 +28,8 @@ Save it and then from command line compile and run
 
 ```bash
 cd tensorflow-java
-javac -cp lib/libtensorflow-1.4.0.jar TensorFlowExample.java
-java -cp lib/libtensorflow-1.4.0.jar:. -Djava.library.path=./jni TensorFlowExample
+javac -cp lib/libtensorflow-1.6.0.jar TensorFlowExample.java
+java -cp lib/libtensorflow-1.6.0.jar:. -Djava.library.path=./jni TensorFlowExample
 ```
 
 If you get the TensorFlow version as output it worked!
@@ -42,8 +42,8 @@ TensorFlowExample using TensorFlow version: 1.0.0-rc2
 We use the `LabelImage` official Tensorflow example to label an example image with the inception graph model.
 
 ```
-$ javac -cp lib/libtensorflow-1.4.0.jar LabelImage.java 
-$ java -cp lib/libtensorflow-1.4.0.jar:. -Djava.library.path=./jni LabelImage models/ images/example-400x288.jpg 
+$ javac -cp lib/libtensorflow-1.6.0.jar LabelImage.java 
+$ java -cp lib/libtensorflow-1.6.0.jar:. -Djava.library.path=./jni LabelImage models/ images/example-400x288.jpg 
 BEST MATCH: lakeside (19,00% likely)
 ```
 
