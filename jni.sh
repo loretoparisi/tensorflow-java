@@ -8,4 +8,4 @@
    tar -xz -C ./jni
 
   curl -L \
-    -o lib/libtensorflow-1.4.0.jar "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-1.6.0.jar"
+    -o lib/libtensorflow-1.6.0.jar "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-1.6.0.jar"
