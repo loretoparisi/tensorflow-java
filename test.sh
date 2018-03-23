@@ -1,4 +1,5 @@
 #!/bin/bash
 
-javac -cp /root/libtensorflow-1.4.0.jar TensorFlowExample.java
-java -cp /root/libtensorflow-1.4.0.jar:. -Djava.library.path=./jni/ TensorFlowExample
+javac -cp lib/libtensorflow-1.6.0.jar LabelImage.java
+java -cp lib/libtensorflow-1.6.0.jar:. -Djava.library.path=./jni LabelImage models/ images/example-400x288.jpg
+
