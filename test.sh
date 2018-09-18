@@ -1,5 +1,5 @@
 #!/bin/bash
-
-javac -cp lib/libtensorflow-1.8.0.jar TensorFlowExample.java
-java -cp lib/libtensorflow-1.8.0.jar:. -Djava.library.path=./jni TensorFlowExample 
+LIB=libtensorflow-1.10.0.jar
+javac -cp lib/$LIB TensorFlowExample.java
+java -cp lib/$LIB:. -Djava.library.path=./jni TensorFlowExample 
 
