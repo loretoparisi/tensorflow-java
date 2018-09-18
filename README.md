@@ -1,5 +1,5 @@
 # tensorflow-java
-Tensorflow Java pipeline and examples. This simple Java pipeline for TensorFlow Java API supports *Tensorflow >= 1.4* and it has been tested with Tensorflow from *TF 1.4.0* to *TF 1.8.0*.
+Tensorflow Java pipeline and examples. This simple Java pipeline for TensorFlow Java API supports *Tensorflow >= 1.4* and it has been tested with Tensorflow from *TF 1.4.0* to *TF 1.10.0*.
 
 ## How To Install
 You need to run the `jni.sh` to install the right Java bindings for your platform and the `download.sh` script that will download the `inception5` model in order to be ready to run a simple examples:
