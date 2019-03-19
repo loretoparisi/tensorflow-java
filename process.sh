@@ -1,12 +1,20 @@
 #!/bin/bash
+
+# Tensorflow Java
+# @author Loreto Parisi (loretoparisi at gmail dot com)
+# v1.0.0
+# @2017-2019 Loreto Parisi (loretoparisi at gmail dot com)
+#
+
 DIR=$1
 IMG=$2
 
+TF_VERSION=1.13.1
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 for filename in $DIR/*.jpg; do
-	OUT=`java -cp lib/libtensorflow-1.8.0.jar:. -Djava.library.path=./jni LabelImage models/ $filename 2>/dev/null`
+	OUT=`java -cp lib/libtensorflow-${TF_VERSION}.jar:. -Djava.library.path=./jni LabelImage models/ $filename 2>/dev/null`
 	
 	fname=$(basename "$filename")
 	extension="${fname##*.}"
